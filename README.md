@@ -37,6 +37,7 @@ This database is meant to cater to diving companies, as well as independent dive
 * [Dive Sites API](http://api.divesites.com/docs/)
 * [Open Weather API](https://openweathermap.org/api)
 * [Tides and Currents API](https://tidesandcurrents.noaa.gov/web_services_info.html)
+* [Weather Stations List](https://tidesandcurrents.noaa.gov/cdata/StationList?type=Current+Data&filter=active)
 * [Wrecks and Obstructions Database](https://nauticalcharts.noaa.gov/data/wrecks-and-obstructions.html)
   * AWOIS Wrecks (.xlsx)
   * AWOIS Obstructions (.xlsx)
