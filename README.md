@@ -19,14 +19,27 @@ This database is meant to cater to diving companies, as well as independent dive
 
 ## ETL Process ## 
 ### Step 1: Extract ### 
+
+**Wrecks and Obstructions Extraction**
+* Downloaded AWOIS Obstructions and AWOIS Wrecks .xlsx files from the [Wrecks and Obstructions Database](https://nauticalcharts.noaa.gov/data/wrecks-and-obstructions.html) 
+* Converted the respective files to a .csv file on local machine 
+* Read the .csv file into Jupyter Notebook for cleaning and transformation 
+
+**Dive Sites Extraction**
+* Used latitude and longitude values from wrecks and obstructions extracted data to make requests from [Dive Sites API](http://api.divesites.com/docs/) 
+* Requests to the API found any dive sites within 25 miles of the latitude and longitute coordinates from the wrecks and obstructions extracted data
+* Data returned from the API requests included Dive Site Name, Dive Site ID, and Distance from the coordinates used in the API request
+
+**Tides and Weather Extraction**
+* Again, used latitude and longitude values from wrecks and obstructions extracted data to make requests from [Open Weather API](https://openweathermap.org/api) to get temperature in fahrenheit(F) and wind speed(mph). 
+
 #### Data Sources #### 
 * [Dive Sites API](http://api.divesites.com/docs/)
-* [Weather API](https://openweathermap.org/api)
+* [Open Weather API](https://openweathermap.org/api)
 * [Tides and Currents API](https://tidesandcurrents.noaa.gov/web_services_info.html)
 * [Wrecks and Obstructions Database](https://nauticalcharts.noaa.gov/data/wrecks-and-obstructions.html)
   * AWOIS Wrecks (.xlsx)
   * AWOIS Obstructions (.xlsx)
-* [Weather Station Identifiers](http://www.weathergraphics.com/identifiers/)
 
 ### Step 2: Transform ###
 
