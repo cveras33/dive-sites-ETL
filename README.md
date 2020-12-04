@@ -4,7 +4,7 @@ There is a lot of very important and useful data available these days, but it is
 ## Background ## 
 Data about dive sites around the world, along with information about the weather, tides, and any wrecks or obstructions at the dive site will be extracted from multiple data sources. The data will then be transformed to ensure only relevant data from each of the datasets makes it to the final database. Once the data is extracted, and cleaned/transformed, it will be loaded into a SQL Database in PostgreSQL. 
 
-This database is meant to cater to diving companies, as well as independent divers that are planning future excursions within the U.S. to assist in a search to find the perfect diving location.
+This database is meant to cater to diving companies, as well as independent divers that are planning future diving excursions to assist in a search to find a desired diving location. 
 
 ## Table of Contents ## 
 * [ETL Process](#etl-process)
