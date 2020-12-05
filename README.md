@@ -193,7 +193,7 @@ Which returns:
 		"Record #" : "9770"
 	}
 		
-Now you know you can dive at Captains Reef USVI, which you can do a simple google search on to find more information. BUT, before you go to google, you want to know *a little* more history about the "FRENCH KISS", so you make the following query using the same record number as in the above query: 
+Now you know you can dive at Captains Reef USVI, which you can do a simple google search on to find more information. BUT, before you go to Google, you want to know *a little* more history about the "FRENCH KISS", so you make the following query using the same record number as in the above query: 
 
 	> db.history.find({"Record #": "9770"}).pretty()
 	  
