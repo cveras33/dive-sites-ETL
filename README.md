@@ -224,7 +224,7 @@ Which returns:
 Wow! 81&deg;F and mild winds?! Looks like you're ready to start planning and now you have a great starting place for that! Enjoy!
 
 #### Status #### 
-This project is *in progress*.
+This project is *complete*.
 
 #### Contacts #### 
 [Tyler Brown](https://github.com/Starcode897)  
