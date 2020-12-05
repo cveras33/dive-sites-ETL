@@ -85,7 +85,7 @@ This database is meant to serve diving companies, as well as independent divers 
 ## Schema ## 
 	dive_sites_db.dive_sites
 	{
-		Dive Site IS: int 	# Unique dive site ID 
+		Dive Site ID: int 	# Unique dive site ID 
 		Dive Site Name: string	# Dive Site Name 
 		Distance: float		# Distance from the wreck/obstructions coordinate in miles
 		Lat: float		# Latitude coordinate
@@ -107,6 +107,16 @@ This database is meant to serve diving companies, as well as independent divers 
 	{ 
 		Record #: int		# Unique Wreck/obstruction Record # 
 		History: string		# Brief history on wreck/obstruction
+	}
+	
+	dive_sites_db.weather
+	{ 
+		Dive Site ID: int 	# Unique dive site ID 
+		Lat: float		# Latitude coordinate
+		Lng: float		# Longitude coordinate
+		Temp(F): float		# Cuurent Temperature(F) at the coordinates
+		Wind Speed(mph): float	# Current Wind Speed (mph) at the coordinates
+		Record #: int		# Unique Wreck/obstruction Record # 
 	}
 
 ## Setup ## 
