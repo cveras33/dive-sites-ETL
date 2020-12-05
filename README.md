@@ -130,15 +130,44 @@ You know you want to see the wreck “FRENCH KISS” on your trip so you make th
 Which returns 
 
                {
-	       "_id" : ObjectId("5fcb9cb168d692e78046b217"),
-	       "Record #" : "9770",
-       		"Vessel Terms" : "FRENCH KISS",
-	       "Feature Type" : "Wreck - Submerged, dangerous to surface navigation",
-	       "Lat" : "18.330839",
-	       "Lng" : "-64.933231",
-	       "GP Quality" : "High"
+	       		"_id" : ObjectId("5fcb9cb168d692e78046b217"),
+	      		"Record #" : "9770",
+       			"Vessel Terms" : "FRENCH KISS",
+	       		"Feature Type" : "Wreck - Submerged, dangerous to surface navigation",
+	       		"Lat" : "18.330839",
+	       		"Lng" : "-64.933231",
+	       		"GP Quality" : "High"
        		}
 
+Now you have a Record #, which you can then use to make a query on the dive_sites collection to find a nearby dive site to dive at: 
+
+          > db.dive_sites.find({"Record #": "9770"}).pretty()
+	 
+Which returns: 
+
+               {
+	       		"_id" : ObjectId("5fcb9ca468d692e780468f1e"),
+			"Dive Site ID" : "22975",
+			"Dive Site Name" : "Captains Reef USVI",
+			"Distance" : "1.29",
+			"Lat" : "18.330839",
+			"Lng" : "-64.933231",
+			"Record #" : "9770"
+       		}
+		
+Now you know you can dive at Captains Reef USVI, which you can do a simple google search on to find more information. BUT, before you go to google, you want to know *a little* more history about the "FRENCH KISS", so you make the following query using the same record number as in the above query: 
+
+          > db.history.find({"Record #": "9770"}).pretty()
+	  
+Which returns: 
+
+               {
+	       		"_id" : ObjectId("5fcb9d4b68d692e78046d52b"),
+			"Record #" : "9770",
+			"History" : "\n HISTORY\n  H10505/93-- OPR-I193-MI; WHILE SEARCHING FOR AWOIS ITEM 8550, ì\nTHE FIBERGLASS SAILBOAT \"FRENCH KISS\" WAS 			LOCATED IN 10 METERS OF ì\nWATER IN LAT. 18-19-51.018N, LONG. 64-55-59.626W. LL LD OF 8.2 ì\nMETERS (27 FEET). WHITE HULL AND DECKS. 10.05 			   X 3.65 METERS (33 X ì\n12 FEET). HULL WAS SITTING UPRIGHT EXTENDING 1.8 METERS (6.2 ì\nFEET) OFF THE BOTTOM. ALL HATCHES WERE OPEN. NO 			  APPARENT HULL ì\nDAMAGE. MAST BROKEN, LEANING OVER THE SIDE AND WAS LOCATION OF ì\nLD. NAME \"FRENCH KISS\" IN ORANGE LETTERS TAPED ACROSS 			     STERN. ì\nEVALUATOR RECOMMENDS CHARTING A 27 WK (FRENCH KISS) AS SURVEYED. ì\n(ENT 6/21/96, SJV)\n"
+       		}
+
+Now you have a great starting place to start planning your next diving trip! 
 
 #### Status #### 
 This project is *in progress*.
