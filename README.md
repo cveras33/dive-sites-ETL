@@ -46,6 +46,7 @@ This database is meant to serve diving companies, as well as independent divers 
 
 **Wrecks and Obstructions Cleaning**
 * *Wrecks and Obstructions cleaning were done exclusive of one another, but the same steps were taken for both data sets* 
+* For a *deeper dive* into the cleaning process see [technical steps for cleaning](https://github.com/cveras33/dive-sites-ETL/blob/main/technical_steps_cleaning.md)
 * After extracting these two `.xlsx files` and converting them to `.csv files` there was some data that was irrelevant to the final data base 
 * The irrelevant files were dropped from the data frame, leaving Record #,	Vessel Terms,	Feature Type,	Lat,	Lng,	GP Quality, and History. 
 * The remaining data was then separated into the following two data frames:
