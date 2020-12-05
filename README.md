@@ -1,5 +1,5 @@
 # Dive Sites ETL #
-There is a lot of very important and useful data available these days, but it is often dispersed among multiple data sources and not well organized. Extracting the data from it's sources, transforming it by cleaning or reformatting it, and loading or storing the resulting data into a well designed database is a critical process for data-driven organizations. This process is referred to as ETL.
+There is a lot of very important and useful data available these days, but it is often dispersed among multiple data sources and not well organized. Extracting the data from its sources, transforming it by cleaning or reformatting it, and loading or storing the resulting data into a well designed database is a critical process for data-driven organizations. This process is referred to as ETL.
 
 ## Background ## 
 Data about dive sites around the world which are within 25 miles of a wreck of obstruction, along with information about the weather and tides at the dive site will be extracted from multiple data sources. The data will then be transformed to ensure only relevant data from each of the sources makes it to the final database. Once the data is extracted, and cleaned/transformed, it will be loaded into a MongoDB database. 
