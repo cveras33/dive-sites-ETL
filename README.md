@@ -64,6 +64,17 @@ This database is meant to serve diving companies, as well as independent divers 
 *The above steps were performed on a data frame which looked like the following image, containing data on wrecks/obstructions and the dive site, which will be separated into two data frames in later steps* 
 ![example](https://github.com/cveras33/dive-sites-ETL/blob/main/Screenshots/wrecks_dive_sites_df.png)
 
+* After the data was cleaned, and properly formatted in the data frame shown above, the data was then separated into two sepratate data frames: 
+  * One containing data on the dive sites with the following columns: 
+    * Dive Site Name, Dive Site ID, Distance, and Record # 
+  * Another containing data on the wrecks/obstructions with the following columns (acknowledging this table was previously created, but this step of combining and then re-separating data frames was pertinent to ensuring coordinates of dive sites were properly aligned with wrecks/obstructions within 25 miles of the proper coordinates): 
+    * Record #,	Vessel Terms,	Feature Type,	Lat,	Lng, and	GP Quality
+    
+* Next for the dive sites data frame, the wrecks/obstructions data frames, and the history data frames, the respective data frames which were separated by wreck and obstructions were combined using the `pd.concat()` function part of the  `Pandas Library` resulting in the following `.csv files`
+  * [final_dive_sites_transformed.csv](https://github.com/cveras33/dive-sites-ETL/blob/main/Resources/final_dive_sites_transformed.csv)
+  * [final_history.csv](https://github.com/cveras33/dive-sites-ETL/blob/main/Resources/final_history.csv)
+  * [final_wrecks_obstructs_transformed.csv](https://github.com/cveras33/dive-sites-ETL/blob/main/Resources/final_wrecks_obstructs_transformed.csv)
+
 ### Step 3: Load ### 
 
 ## Setup ## 
