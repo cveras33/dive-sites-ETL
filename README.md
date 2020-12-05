@@ -118,12 +118,6 @@ This database is meant to serve diving companies, as well as independent divers 
 7. To view the database open the MongoDB Compass program and click connect 
 8. `dive_sites_db` should be listed and you can click on it to view collections, as well as click on any of the collections to view a single record 
 
-## Description ## 
-
-| Attribute | Description | Example |
-| :-------: | :---------: | :-----: |
-| Record #  | Unique numerical record identifier | 14109 |
-
 ## Sample Queries ## 
 The following queries are example of how you would use the `dive_sites_db`: 
 
