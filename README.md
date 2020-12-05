@@ -13,6 +13,7 @@ This database is meant to serve diving companies, as well as independent divers 
   * [Step 2: Transform](#step-2-transform)
   * [Step 3: Load](#step-3-load)
 * [Setup](#setup)
+* [Description](#description)
 * [Sample Queries](#sample-queries)
 * [Status](#status)
 * [Contacts](#contacts)
@@ -115,7 +116,13 @@ This database is meant to serve diving companies, as well as independent divers 
 5. Once the notebook opens, click on the `Kernel` tab at the top of the notebook and select `Restart & Run All` 
 6. This will create the `dive_sites_db` on your local machine. 
 7. To view the database open the MongoDB Compass program and click connect 
-8. dive_sites_db should be listed and you can click on it to view collections, as well as click on any of the collections to view a single record 
+8. `dive_sites_db` should be listed and you can click on it to view collections, as well as click on any of the collections to view a single record 
+
+## Description ## 
+
+| Attribute | Description | Example |
+| :-------: | :---------: | :-----: |
+| Seconds   | 301         | 283     |
 
 ## Sample Queries ## 
 The following queries are example of how you would use the `dive_sites_db`: 
