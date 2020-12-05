@@ -12,8 +12,8 @@ This database is meant to serve diving companies, as well as independent divers 
     * [Data Sources](#data-sources)
   * [Step 2: Transform](#step-2-transform)
   * [Step 3: Load](#step-3-load)
-* [Sample Queries](#sample-queries)
 * [Setup](#setup)
+* [Sample Queries](#sample-queries)
 * [Status](#status)
 * [Contacts](#contacts)
 
@@ -80,9 +80,6 @@ This database is meant to serve diving companies, as well as independent divers 
 * After the files were reformatted, a connection to Mongo was created using `PyMongo` 
 * Finally, the reformatted files were inserted into collections in the `dive_sites_db` through an iterable `for loop` and `PyMongo insert()` function 
 
-## Sample Queries ## 
-The following queries are example of how you would use the `dive_sites_db`: 
-
 ## Setup ## 
 1. Clone the repository to your local drive by: 
     * Clicking on the green "Code" buttom at the top of the page
@@ -90,10 +87,28 @@ The following queries are example of how you would use the `dive_sites_db`:
     * Open your terminal and navigate to the directory you want this repository to live in 
       * i.e. `cd Documents/ETL-Project/` 
     * Type `git clone` and paste the `SSH` code you copied from the GitHub website into your terminal and hit enter 
-2. Now, from the dive-sites-ETL folder in your terminal, type `jupyter notebook` and hit enter. This will open a tab in your default browser where you will see all the folders and files in the dive-sites-ETL folder. 
-3. Click on the `load_to_mongodb.ipynb` file 
-4. Once the notebook opens, click on the `Kernel` tab at the top of the notebook and select `Restart & Run All` 
-5. This will create the `dive_sites_db` on your local machine. 
+2. You will need to have PyMongo and MongoDB installed on your machine in order to create and make queries on this database. 
+For Mac Users: 
+    * You will also need to have homebrew installed for some of the other installations. To install homebrew go to the following link and follow the instractions:
+      * https://brew.sh/
+    * To install PyMongo run the following in your terminal `pip install Flask-PyMongo` 
+    * Then run `brew cask install chromedriver` in your terminal as well 
+      * If you run into permission issues after installing chromedriver, you can grant permission by going to: System Preferences → Security and Privacy → General → Allow Anyway.
+    * After all that is complete, run the following 3 commands in your terminal: 
+      * `brew tap mongodb/brew`       
+      * `brew install mongodb-community@4.4`
+      * `brew services start mongodb-community@4.4`
+    * You will also need to install MongoDB Compass for which you can find installation instructions at the following link: 
+      * https://docs.mongodb.com/compass/master/install
+3. Now that all of the necessary technologies are installed, from the dive-sites-ETL folder in your terminal, type `jupyter notebook` and hit enter. This will open a tab in your default browser where you will see all the folders and files in the dive-sites-ETL folder. 
+4. Click on the `load_to_mongodb.ipynb` file 
+5. Once the notebook opens, click on the `Kernel` tab at the top of the notebook and select `Restart & Run All` 
+6. This will create the `dive_sites_db` on your local machine. 
+7. To view the database open the MongoDB Compass program and click connect 
+8. dive_sites_db should be listed and you can click on it to view collections, as well as click on any of the collections to view a single record 
+
+## Sample Queries ## 
+The following queries are example of how you would use the `dive_sites_db`: 
 
 #### Status #### 
 This project is *in progress*.
