@@ -204,8 +204,24 @@ Which returns:
 			"Record #" : "9770",
 			"History" : "\n HISTORY\n  H10505/93-- OPR-I193-MI; WHILE SEARCHING FOR AWOIS ITEM 8550, ì\nTHE FIBERGLASS SAILBOAT \"FRENCH KISS\" WAS LOCATED IN 10 METERS OF ì\nWATER IN LAT. 18-19-51.018N, LONG. 64-55-59.626W. LL LD OF 8.2 ì\nMETERS (27 FEET). WHITE HULL AND DECKS. 10.05 X 3.65 METERS (33 X ì\n12 FEET). HULL WAS SITTING UPRIGHT EXTENDING 1.8 METERS (6.2 ì\nFEET) OFF THE BOTTOM. ALL HATCHES WERE OPEN. NO APPARENT HULL ì\nDAMAGE. MAST BROKEN, LEANING OVER THE SIDE AND WAS LOCATION OF ì\nLD. NAME \"FRENCH KISS\" IN ORANGE LETTERS TAPED ACROSS STERN. ì\nEVALUATOR RECOMMENDS CHARTING A 27 WK (FRENCH KISS) AS SURVEYED. ì\n(ENT 6/21/96, SJV)\n"
        		}
+		
+One last thing you'll want to check before heading off on your diving trip is the weather, which you can find current weather in the dive_sites_db by making the query: 
 
-Now you have a great starting place to start planning your next diving trip! 
+	> db.weather.find({"Record #":"9770"}).pretty()
+	
+Which returns: 
+
+	{
+		"_id" : ObjectId("5fcbd477fe4773eeefe6f8ae"),
+		"Dive Site ID" : "22975",
+		"Lat" : "18.330839",
+		"Lng" : "-64.933231",
+		"Temp(F)" : "81.39",
+		"Wind Speed(mph)" : "5.01",
+		"Record #" : "9770"
+	}
+
+Wow! 81&deg;F and mild winds?! Looks like you're ready to start planning and now you have a great starting place for that! Enjoy!
 
 #### Status #### 
 This project is *in progress*.
