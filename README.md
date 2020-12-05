@@ -123,19 +123,21 @@ So, now you have the repository and database set up on your local machine and yo
 * First connect to your MongoDB by typing the command `mongo` right in your command line 
 * Then, you'll want to specify that you want to make queries from the dive_site_db so type `use dive_site_db` and hit enter and you'll be ready to start making some queries!
 
-You know you want to see the wreck “FRENCH KISS” on your trip so you make the following query: 
-      > db.wrecks_obstructs.find({"Vessel Terms": "FRENCH KISS"}).pretty()
+You know you want to see the wreck “FRENCH KISS” on your trip so you make the following query:
+
+          > db.wrecks_obstructs.find({"Vessel Terms": "FRENCH KISS"}).pretty()
+
 Which returns 
-      {
+
+               {
 	       "_id" : ObjectId("5fcb9cb168d692e78046b217"),
 	       "Record #" : "9770",
-       	"Vessel Terms" : "FRENCH KISS",
+       		"Vessel Terms" : "FRENCH KISS",
 	       "Feature Type" : "Wreck - Submerged, dangerous to surface navigation",
 	       "Lat" : "18.330839",
 	       "Lng" : "-64.933231",
 	       "GP Quality" : "High"
-        
-       }
+       		}
 
 
 #### Status #### 
