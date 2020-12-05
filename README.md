@@ -90,6 +90,7 @@ This database is meant to serve diving companies, as well as independent divers 
 2. You will need to have PyMongo and MongoDB installed on your machine in order to create and make queries on this database. 
 
 For Mac Users: 
+
     * You will also need to have homebrew installed for some of the other installations. To install homebrew go to the following link and follow the instractions:
       * https://brew.sh/
     * To install PyMongo run the following in your terminal `pip install Flask-PyMongo` 
