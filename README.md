@@ -12,6 +12,7 @@ This database is meant to serve diving companies, as well as independent divers 
     * [Data Sources](#data-sources)
   * [Step 2: Transform](#step-2-transform)
   * [Step 3: Load](#step-3-load)
+* [Shcema](#schema)
 * [Setup](#setup)
 * [Sample Queries](#sample-queries)
 * [Status](#status)
@@ -80,6 +81,33 @@ This database is meant to serve diving companies, as well as independent divers 
 * The `.csv files` were first converted to a dictionary format using `csv.DictReader()`
 * After the files were reformatted, a connection to Mongo was created using `PyMongo` 
 * Finally, the reformatted files were inserted into collections in the `dive_sites_db` through an iterable `for loop` and `PyMongo insert()` function 
+
+## Schema ## 
+	dive_sites_db.dive_sites
+	{
+		Dive Site IS: int 	# Unique dive site ID 
+		Dive Site Name: string	# Dive Site Name 
+		Distance: float		# Distance from the wreck/obstructions coordinate in miles
+		Lat: float		# Latitude coordinate
+		Lng: float		# Longitude coordinate
+		Record #: int		# Unique Wreck/obstruction Record # 
+	}
+
+	dive_sites_db.wrecks_obstructs
+	{
+		Record #: int		# Unique Wreck/obstruction Record # 
+		Vessel Terms: string	# Name or description of wreck/obstruction
+		Feature Type: string	# The object that had been sunk
+		Lat: float		# Latitude coordinate
+		Lng: float		# Longitude coordinate
+		GP Quality: string	# Index which indicate how easy or difficult it will be to find
+	}
+
+	dive_sites_db.history
+	{ 
+		Record #: int		# Unique Wreck/obstruction Record # 
+		History: string		# Brief history on wreck/obstruction
+	}
 
 ## Setup ## 
 1. Clone the repository to your local drive by: 
