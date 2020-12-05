@@ -103,6 +103,13 @@ For Mac Users:
   * You will also need to install MongoDB Compass for which you can find installation instructions at the following link: 
     * https://docs.mongodb.com/compass/master/install
     
+For PC Users: 
+  * Install Flask-PyMongo with the following command:
+    * `pip install Flask-PyMongo`
+  * Install the latest version of MongoDB Community Edition as described here:
+    * https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+  * Add the path to the MongoDB bin folder (probably something like: C:\Program Files\MongoDB\Server\4.4\bin\) to your System Environment Path Variable.
+    
 3. Now that all of the necessary technologies are installed, from the dive-sites-ETL folder in your terminal, type `jupyter notebook` and hit enter. This will open a tab in your default browser where you will see all the folders and files in the dive-sites-ETL folder. 
 4. Click on the `load_to_mongodb.ipynb` file 
 5. Once the notebook opens, click on the `Kernel` tab at the top of the notebook and select `Restart & Run All` 
