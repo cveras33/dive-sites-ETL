@@ -13,7 +13,6 @@ This database is meant to serve diving companies, as well as independent divers 
   * [Step 2: Transform](#step-2-transform)
   * [Step 3: Load](#step-3-load)
 * [Setup](#setup)
-* [Description](#description)
 * [Sample Queries](#sample-queries)
 * [Status](#status)
 * [Contacts](#contacts)
