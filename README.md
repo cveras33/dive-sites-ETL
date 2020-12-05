@@ -31,7 +31,7 @@ This database is meant to cater to diving companies, as well as independent dive
 * Data returned from the API requests included Dive Site Name, Dive Site ID, and Distance from the coordinates used in the API request
 
 **Tides and Weather Extraction**
-* Again, used latitude and longitude values from wrecks and obstructions extracted data to make requests from [Open Weather API](https://openweathermap.org/api) to get temperature in fahrenheit(F) and wind speed(mph). 
+* Again, used latitude and longitude values from wrecks and obstructions extracted data to make requests from [Open Weather API](https://openweathermap.org/api) to get temperature in fahrenheit(&deg;F) and wind speed(mph). 
 
 #### Data Sources #### 
 * [Dive Sites API](http://api.divesites.com/docs/)
