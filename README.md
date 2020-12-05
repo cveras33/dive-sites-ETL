@@ -122,7 +122,7 @@ This database is meant to serve diving companies, as well as independent divers 
 
 | Attribute | Description | Example |
 | :-------: | :---------: | :-----: |
-| Seconds   | 301         | 283     |
+| Record #  | Unique numerical record identifier | 14109 |
 
 ## Sample Queries ## 
 The following queries are example of how you would use the `dive_sites_db`: 
