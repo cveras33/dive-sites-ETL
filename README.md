@@ -56,7 +56,7 @@ This database is meant to serve diving companies, as well as independent divers 
   * History data frame, with columns: 
     * Record # and History
 
-**Wreck, Obstructions, and Dive Sites Cleaning and Transformation**
+**Wrecks, Obstructions, and Dive Sites Cleaning and Transformation**
 * Following the cleaning of wrecks/obstructions data, the resulting data frames were used to make the dive site API calls, as stated above in the [Step 1: Extract](#step-1-extract) section 
 * When running the API calls, a `try` and `except` block was included to fill any rows where there was not a dive site within 25 miles of a wreck/obstruction with `NaN`
 * The resulting data from the API calls had about 2,000 rows with `NaN` in the dive site name column, and ultimately these rows were dropped by running a `dropna(subset = ['Dive Site Name'])` on the data frames. 
