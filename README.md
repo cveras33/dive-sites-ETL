@@ -12,7 +12,7 @@ This database is meant to serve diving companies, as well as independent divers 
     * [Data Sources](#data-sources)
   * [Step 2: Transform](#step-2-transform)
   * [Step 3: Load](#step-3-load)
-* [Data Sources](#data-sources)
+* [Sample Queries](#sample-queries)
 * [Setup](#setup)
 * [Status](#status)
 * [Contacts](#contacts)
@@ -79,6 +79,9 @@ This database is meant to serve diving companies, as well as independent divers 
 * The `.csv files` were first converted to a dictionary format using `csv.DictReader()`
 * After the files were reformatted, a connection to Mongo was created using `PyMongo` 
 * Finally, the reformatted files were inserted into collections in the `dive_sites_db` through an iterable `for loop` and `PyMongo` `insert()` function 
+
+## Sample Queries ## 
+The following queries are example of how you would use the `dive_sites_db`: 
 
 ## Setup ## 
 
