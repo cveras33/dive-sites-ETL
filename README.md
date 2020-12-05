@@ -23,9 +23,9 @@ This database is meant to serve diving companies, as well as independent divers 
 ### Step 1: Extract ### 
 
 **Wrecks and Obstructions Extraction**
-* Downloaded AWOIS Obstructions and AWOIS Wrecks .xlsx files from the [Wrecks and Obstructions Database](https://nauticalcharts.noaa.gov/data/wrecks-and-obstructions.html) 
-* Converted the respective files to a .csv file on local machine 
-* Read the .csv file into Jupyter Notebook for cleaning and transformation 
+* Downloaded AWOIS Obstructions and AWOIS Wrecks `.xlsx files` from the [Wrecks and Obstructions Database](https://nauticalcharts.noaa.gov/data/wrecks-and-obstructions.html) 
+* Converted the respective files to a `.csv file` on local machine 
+* Read the `.csv file` into Jupyter Notebook for cleaning and transformation 
 
 **Dive Sites Extraction**
 * Used latitude and longitude values from wrecks and obstructions extracted data to make requests from [Dive Sites API](http://api.divesites.com/docs/) 
@@ -33,7 +33,7 @@ This database is meant to serve diving companies, as well as independent divers 
 * Data returned from the API requests included Dive Site Name, Dive Site ID, and Distance from the coordinates used in the API request
 
 **Tides and Weather Extraction**
-* Again, used latitude and longitude values from wrecks and obstructions extracted data to make requests from [Open Weather API](https://openweathermap.org/api) to get temperature in fahrenheit(&deg;F) and wind speed(mph). 
+* Again, used latitude and longitude values from final dive sites data frame to make requests from [Open Weather API](https://openweathermap.org/api) to get temperature in fahrenheit(&deg;F) and wind speed(mph). 
 
 #### Data Sources #### 
 * [Dive Sites API](http://api.divesites.com/docs/)
@@ -46,13 +46,26 @@ This database is meant to serve diving companies, as well as independent divers 
 
 ### Step 2: Transform ###
 
+**Wrecks and Obstructions Cleaning**
+* *Wrecks and Obstructions cleaning were done exclusive of one another, but the same steps were taken for both data sets* 
+* After extracting these two `.xlsx files` and converting them to `.csv files` there was some data that was irrelevant to the final data base 
+* The irrelevant files were dropped from the data frame, leaving Record #,	Vessel Terms,	Feature Type,	Lat,	Lng,	GP Quality, and History. 
+* The remaining data was then separated into the following two data frames:
+  * Wrecks/Obstructions data frame, with columns: 
+    * Record #,	Vessel Terms,	Feature Type,	Lat,	Lng, and	GP Quality
+  * History data frame, with columns: 
+    * Record # and History
+
+**Wreck, Obstructions, and Dive Sites Cleaning and Transformation**
+* Following the cleaning of wrecks/obstructions data, the resulting data frames were used to make the dive site API calls, as stated above in the [Extraction](#extraction) section 
+* When running the API calls, a `try` and `except` block was included to fill any rows where there was not a dive site within 25 miles of a wreck/obstruction with `NaN`
+* The resulting data from the API calls had about 2,000 rows with `NaN` in the dive site name column, and ultimately these rows were dropped by running a `dropna(subset = ['Dive Site Name'])` on the data frames. 
+* *The above steps were performed on a data frame which looked like the following image, containing data on wrecks/obstructions and the dive site, which will be separated into two data frames in later steps* 
+![example](https://github.com/cveras33/dive-sites-ETL/blob/main/Screenshots/wrecks_dive_sites_df.png)
+
 ### Step 3: Load ### 
 
 ## Setup ## 
-
-#### Mac ####
-
-#### PC ####
 
 #### Status #### 
 This project is *in progress*.
