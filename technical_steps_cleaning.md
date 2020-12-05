@@ -6,7 +6,7 @@ Technical steps for cleaning and providing data for dive sites project.
 
 2. Examining the data - Since the files were native Excel documents, we were able to open the files and start examining "what's in here".  ((screens shots below - wrecks first then obstructions))
 
-   ​	
+   ​	![pic1](https://github.com/cveras33/dive-sites-ETL/blob/main/Screenshots/wrecks-excel-raw.bmp)
 
 3. The first thing was the files had the same layout.  Same columns and names so whatever we did with the first file we could apply to the second file.  The next step was to see if there was any data that was not needed for our project.  The columns "DEPTH", "SOUNDING_TYPE" and "YEARSUNK" were filled in less that 50 percent of the time so we chose to remove this data.  The "RECRD" column was found to be a unique number across both files so we were able to keep this as a id number going forward.  "VESSLTERMS","FEATURE_TYPE","LATDEC", "LONGDEC" were kept.  These are the backbone of what we wanted from this data source.  "GP_QUALITY" proved to be an interesting data point.   With values of "High", "Med", "Low" and "Poor", this describes the quality of the lat/long location information.  This was thought to be useful for our project so it was kept.  "HISTORY" was a free-form notes field with useful information but was not formatted well.  We chose to keep it in a separate chart with the RECRD field to be able to access this information
 
