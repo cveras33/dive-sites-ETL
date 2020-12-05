@@ -14,8 +14,6 @@ This database is meant to serve diving companies, as well as independent divers 
   * [Step 3: Load](#step-3-load)
 * [Data Sources](#data-sources)
 * [Setup](#setup)
-  * [Mac](#mac)
-  * [PC](#pc)
 * [Status](#status)
 * [Contacts](#contacts)
 
