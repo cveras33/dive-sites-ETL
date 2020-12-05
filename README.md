@@ -14,6 +14,8 @@ This database is meant to cater to diving companies, as well as independent dive
   * [Step 3: Load](#step-3-load)
 * [Data Sources](#data-sources)
 * [Setup](#setup)
+  * [Mac](#mac)
+  * [PC](#pc)
 * [Status](#status)
 * [Contacts](#contacts)
 
@@ -47,6 +49,10 @@ This database is meant to cater to diving companies, as well as independent dive
 ### Step 3: Load ### 
 
 ## Setup ## 
+
+#### Mac ####
+
+#### PC ####
 
 #### Status #### 
 This project is *in progress*. 
