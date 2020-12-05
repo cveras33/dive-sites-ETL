@@ -55,7 +55,7 @@ This database is meant to serve diving companies, as well as independent divers 
 #### PC ####
 
 #### Status #### 
-This project is *in progress*. 
+This project is *in progress*.
 
 #### Contacts #### 
 [Tyler Brown](https://github.com/Starcode897)  
