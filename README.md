@@ -84,6 +84,16 @@ This database is meant to serve diving companies, as well as independent divers 
 The following queries are example of how you would use the `dive_sites_db`: 
 
 ## Setup ## 
+1. Clone the repository to your local drive by: 
+  a. Clicking on the green "Code" buttom at the top of the page
+  b. Copying the `SSH` code 
+  c. Open your terminal and navigate to the directory you want this repository to live in 
+    i. i.e. `cd Documents/ETL-Project/` 
+  d. Type `git clone` and paste the `SSH` code you copied from the GitHub website into your terminal and hit enter 
+2. Now, from the dive-sites-ETL folder in your terminal, type `jupyter notebook` and hit enter. This will open a tab in your default browser where you will see all the folders and files in the dive-sites-ETL folder. 
+3. Click on the `load_to_mongodb.ipynb` file 
+4. Once the notebook opens, click on the `Kernel` tab at the top of the notebook and select `Restart & Run All` 
+5. This will create the `dive_sites_db` on your local machine. 
 
 #### Status #### 
 This project is *in progress*.
