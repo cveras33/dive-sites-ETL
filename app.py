@@ -8,31 +8,20 @@ conn = "mongodb://localhost:27017"
 client = pymongo.MongoClient(conn)
 
 # connect to mongo db and collection
-#db = client.store_inventory
-#produce = db.produce
+db = client.dive_sites_db
+wks = db.wrecks_obstructs
 
 
 @app.route("/")
 def homepg():
-    # write a statement that finds all the items in the db and sets it to a variable
-    #inventory = list(produce.find())
-    #print(inventory)
+    
+    wreck_name = wks.find({"Vessel Terms": "FRENCH KISS"})
 
-    # render an index.html template and pass it the data you retrieved from the database
-    return render_template("index.html", inventory=inventory)
 
-    # inventory is a variable to pass
-    #"""
-@app.route("/dive_by_name")
+    return render_template("index.html", wr_name = wreck_name)
 
 
 
 
-@app.route("/dive_by_site")
-
-
-
-
-    #""""
 if __name__ == "__main__":
     app.run(debug=True)
